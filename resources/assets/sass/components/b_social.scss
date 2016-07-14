@@ -1,0 +1,57 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    max-width: 338px;
+    padding-right: 90px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-right: 0;
+  }
+
+  &__btn {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+    border-radius: 50%;
+
+    &--hidden {
+      display: none;
+    }
+
+    & svg {
+      width: 50px;
+      height: 50px;
+
+      transition: fill .2s;
+
+      fill: $gray-1;
+
+      @media (min-width: 768px) {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: $blue-1;
+    }
+
+    @media (min-width: 768px) {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-left: 27px;
+    }
+  }
+}

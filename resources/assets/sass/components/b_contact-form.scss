@@ -1,0 +1,148 @@
+.contact-form {
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 5px;
+    padding-top: 29px;
+    padding-bottom: 25px;
+
+    text-align: center;
+
+    background-color: $blue-2;
+    border-bottom: 14px solid $blue-3;
+
+    @include font($fs-contact-form-title-320, $lh-base, $fw-normal, $white);
+
+    @media (min-width: 768px) {
+      padding-top: 40px;
+      padding-bottom: 35px;
+
+      font-size: $fs-contact-form-title-768;
+
+      border-bottom-width: 21px;
+    }
+
+    & > br {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    padding-bottom: 40px;
+
+    background-color: $gray-3;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 125px;
+      padding-top: 60px;
+      padding-bottom: 96px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include font($fs-contact-form-label-320, $color: $gray-1);
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: 768px) {
+        flex-basis: 100%;
+        margin-top: 25px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &:nth-child(4) {
+      @media (min-width: 768px) {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-basis: 45%;
+
+      font-size: $fs-contact-form-label-768;
+    }
+  }
+
+  &__field {
+    margin-top: 5px;
+    padding: 8px 8px;
+    padding-top: 10px;
+
+    border: 1px solid $blue-3;
+    border-radius: 3px;
+    outline: none;
+
+    @include font($fs-field-320, $color: $blue-3);
+
+    &--error {
+      background-color: lighten($error-color, 15%);
+      border-color: darken($error-color, 10%);
+    }
+
+    @media (min-width: 768px) {
+      padding: 8px 14px 6px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: $fs-contact-form-field-1200;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px $blue-3;
+    }
+  }
+
+  &__button-block {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__button {
+    flex-basis: 43%;
+
+    @media (min-width: 1200px) {
+      flex-basis: auto;
+    }
+
+    &--submit {
+      @extend %btn--submit;
+    }
+
+    &--reset {
+      @extend %btn--reset;
+    }
+  }
+}
+

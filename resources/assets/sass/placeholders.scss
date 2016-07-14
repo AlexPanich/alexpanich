@@ -1,0 +1,161 @@
+%zero-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  & > * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+%info-block {
+  margin-bottom: 15px;
+  padding: 12px;
+
+  background-color: $gray-3;
+  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+    padding: 18px;
+    padding-top: 25px;
+    padding-bottom: 45px;
+    padding-left: 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    @include font($fs-info-block-title-320, $lh-base, $fw-normal, $blue-1);
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding-right: 28px;
+      padding-bottom: 15px;
+      padding-left: 28px;
+
+      font-size: $fs-info-block-title-768;
+      text-align: left;
+
+      border-bottom: 2px solid $blue-1;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @extend %zero-list;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+      padding-left: 60px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 55px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-top: 60px;
+
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin-bottom: 35px;
+      padding-top: 0;
+      padding-left: 60px;
+
+      text-align: left;
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 55px;
+    }
+
+    &:last-child {
+      @media(min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      width: 40px;
+      height: 40px;
+      margin: auto;
+
+      @media (min-width: 768px) {
+        top: -5px;
+        right: auto;
+      }
+    }
+
+    &-name {
+      margin-bottom: 5px;
+
+      @include font($fs-list-name-320, $lh-list, $fw-normal);
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+
+        @include font($fs-list-name-768, $lh-list, $fw-normal);
+      }
+
+      @media (min-width: 1200px) {
+        font-size: $fs-list-name-1200;
+      }
+    }
+
+    &-time {
+      @include font($fs-list-time-320, $lh-list);
+
+      @media (min-width: 768px) {
+        @include font($fs-list-time-768, $lh-list);
+      }
+
+      @media (min-width: 1200px) {
+        font-size: $fs-list-time-1200;
+      }
+    }
+  }
+}
+
+%btn--submit {
+  @include btn($blue-3, $blue-1);
+}
+
+%btn--reset {
+  @include btn($gray-4, $gray-5);
+}
+
+
+
+
+

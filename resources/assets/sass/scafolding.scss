@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  @include font();
+}
+
+
+body *,
+body *::before,
+body *::after {
+  box-sizing: inherit;
+}

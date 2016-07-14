@@ -1,0 +1,149 @@
+.modal-login {
+  position: fixed;
+  z-index: 100;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba($gray-1, .8);
+  opacity: 0;
+
+  transition: opacity .3s;
+
+  @include zero-center;
+  $margin-button-320: 18px;
+  $margin-button-768: 30px;
+  $margin-button-1200: 35px;
+
+  &__inner {
+    width: 90%;
+    max-width: 300px;
+    overflow: hidden;
+
+    border-radius: 3px;
+    box-shadow: 0 4px 7px -2px $black;
+
+    @media (min-width: 768px) {
+      max-width: 508px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 590px;
+    }
+  }
+
+  &.show {
+    display: flex;
+
+    opacity: 1;
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 10px;
+
+    text-align: center;
+
+    background-color: $blue-2;
+    border-bottom: 9px solid $blue-3;
+
+    @include font($fs-popup-title-320, $lh-base, $fw-normal, $white);
+
+    @media (min-width: 768px) {
+      padding-top: 30px;
+      padding-bottom: 23px;
+
+      font-size: $fs-popup-title-768;
+
+      border-bottom-width: 17px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: $margin-button-320;
+    padding-left: 25px;
+
+    background-color: $gray-3;
+
+    @media (min-width: 768px) {
+      padding-top: 26px;
+      padding-right: 45px;
+      padding-bottom: $margin-button-768;
+      padding-left: 45px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-right: 80px;
+      padding-bottom: $margin-button-1200;
+      padding-left: 80px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+
+    text-align: center;
+
+    @include font($fs-popup-label-320, $color: $gray-1);
+
+    @media (min-width: 768px) {
+      margin-bottom: 25px;
+
+      font-size: $fs-popup-label-768;
+    }
+
+    &:last-of-type {
+      margin-bottom: $margin-button-320;
+
+      @media (min-width: 768px) {
+        margin-bottom: $margin-button-768;
+      }
+
+      @media (min-width: 1200px) {
+        margin-bottom: $margin-button-1200;
+      }
+    }
+  }
+
+  &__field {
+    padding: 3px 20px;
+
+    border: 1px solid $blue-3;
+    border-radius: 3px;
+    outline: none;
+
+    @include font($fs-field-320, 2, $color: $blue-3);
+
+    &--error {
+      background-color: lighten($error-color, 15%);
+      border-color: darken($error-color, 10%);
+    }
+
+    @media (min-width: 768px) {
+      padding: 6px 25px;
+
+      font-size: $fs-field-768;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px $blue-3;
+    }
+  }
+
+  &__button {
+    align-self: center;
+
+    &--submit {
+      @extend %btn--submit;
+    }
+  }
+}

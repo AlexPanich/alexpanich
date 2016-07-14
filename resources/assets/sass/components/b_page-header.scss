@@ -1,0 +1,73 @@
+.page-header {
+  position: relative;
+
+  background-color: $bg-color-header;
+  border-width: 0;
+  border-style: solid;
+  border-color: #2c7083;
+  border-bottom-width: 3px;
+  border-image-source: linear-gradient(90deg, rgb(242,246,250) 0%, rgb(135,174,186) 20%, rgb(28,102,122) 50%, rgb(135,174,186) 80%, rgb(242,246,250) 100%);
+  border-image-slice: 0 0 100% 0;
+
+
+
+
+  &__inner {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 17px;
+    padding-bottom: 7px;
+
+    @include container();
+
+    @media (min-width: 768px) {
+      padding-top: 38px;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 100%;
+      max-width: 1200px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__social-wrap {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+    display: none;
+
+    &--show {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      top: 80%;
+      left: auto;
+
+      width: 240px;
+    }
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+

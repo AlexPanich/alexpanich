@@ -1,0 +1,171 @@
+.contacts {
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    overflow: hidden;
+
+    border-radius: 3px;
+  }
+
+  &__title {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+
+    background-color: $blue-1;
+
+    @include font($fs-side-bar-caption, $lh-base, $fw-normal, $white);
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @extend %zero-list;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    @media (min-width: 1200px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    @media (min-width: 768px) {
+      flex-grow: 1;
+      flex-basis: 33.3%;
+
+      &--email {
+        order: 2;
+      }
+
+      &--skype {
+        order: 3;
+      }
+
+      &--phone {
+        order: 1;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      width: 250px;
+
+      &--email {
+        order: 1;
+      }
+
+      &--skype {
+        order: 3;
+      }
+
+      &--phone {
+        order: 2;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    display: block;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 38%;
+
+    text-align: left;
+    text-decoration: none;
+
+    @include font($fs-contact-link-320, $lh-base, $fw-normal, $white);
+
+    @media (min-width: 768px) {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 35%;
+
+      font-size: $fs-contact-link-768;
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 33%;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      @media (min-width: 1200px) {
+        text-decoration: underline;
+      }
+    }
+
+    & svg {
+      position: absolute;
+      top: 0;
+      right: 65%;
+      bottom: 0;
+
+      width: 22px;
+      height: 22px;
+      margin: auto;
+
+      fill: $white;
+
+      @media (min-width: 768px) {
+        right: 70%;
+        bottom: 5px;
+
+        width: 25px;
+        height: 25px;
+      }
+
+      @media (min-width: 1200px) {
+        right: 73%;
+      }
+    }
+
+    &--email {
+      background-color: $email-color-320;
+
+      @media (min-width: 768px) {
+        background-color: $email-color-768;
+      }
+
+      @media (min-width: 1200px) {
+        background-color: $email-color-1200;
+      }
+    }
+
+    &--phone {
+      background-color: $phone-color-320;
+
+      @media (min-width: 768px) {
+        background-color: $phone-color-768;
+      }
+
+      @media (min-width: 1200px) {
+        background-color: $phone-color-1200;
+      }
+    }
+
+    &--skype {
+      background-color: $skype-color-320;
+
+      @media (min-width: 768px) {
+        background-color: $skype-color-768;
+      }
+
+      @media (min-width: 1200px) {
+        background-color: $skype-color-1200;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+// colors
+
+$blue-1: #3ba8c0;
+$blue-2: #41b9d4;
+$blue-3: #48cbe8;
+$blue-4: #51daf8;
+$gray-1: #58697a;
+$gray-2: #959aa8;
+$gray-3: #eff3f7;
+$gray-4: #849db5;
+$gray-5: #687b8f;
+$black: #000;
+$white: #fff;
+$font-color: #4a545d;
+$link-color: #89cbd9;
+$bg-color-header: $gray-3;
+$bg-color-footer: $gray-3;
+$bg-color-main-nav-320: $gray-3;
+$bg-color-main-nav-320-active: #2fa5bc;
+$border-main-nav-320: #8196ac;
+$skills-gradient-color-top: $blue-1;
+$skills-gradient-color-bottom: darken($blue-1, 11);
+$email-color-320: #27a1ba;
+$email-color-768: $blue-3;
+$email-color-1200: $blue-2;
+$phone-color-320: $blue-2;
+$phone-color-768: $blue-2;
+$phone-color-1200: $blue-3;
+$skype-color-320: $blue-3;
+$skype-color-768: $blue-4;
+$skype-color-1200: $blue-4;
+$list-name-color: #4a545d;
+$list-desc-color: #37424d;
+$error-color: #f97e76;
+$work-hover-color: rgba(#016ca4, .75);
+
+//typography - font-size
+
+$fs-base: 15px;
+$fs-p: $fs-base;
+$fs-h1: round($fs-base * 1.8);     // 27px
+$fs-h2: round($fs-base * 1.6667);  // 25px
+$fs-h3: round($fs-base * 1.5334);  // 23px
+$fs-h4: round($fs-base * 1.4);     // 21px
+$fs-h5: round($fs-base * 1.2667);  // 19px
+$fs-h6: round($fs-base * 1.1334);  // 17px
+
+$fs-info-block-title-320: 24px;   // 24px
+$fs-info-block-title-768: 27px;  // 27px
+$fs-basic-information-name-320: 20px; // 20px
+$fs-basic-information-name-768: 19px; // 19px
+$fs-basic-information-name-1200: 17px; // 19px
+$fs-basic-information-desc-320: 19px; // 19px
+$fs-basic-information-desc-768: 18px; // 18px
+$fs-basic-information-desc-1200: 15px; // 18px
+$fs-list-name-320: 17px;
+$fs-list-name-768: 19px;
+$fs-list-name-1200: 17px;
+$fs-list-time-320: 15px;
+$fs-list-time-768: 18px;
+$fs-list-time-1200: 15px;
+$fs-skill-320: 14px;
+$fs-copyright-320: 11px;
+$fs-copyright-768: 13px;
+$fs-side-bar-caption: 21px;
+$fs-main-nav-320: 24px;
+$fs-main-nav-1200: 21px;
+$fs-contact-link-320: 16px;
+$fs-contact-link-768: 17px;
+$fs-popup-title-320: 24px;
+$fs-popup-title-768: 40px;
+$fs-popup-label-320: 21px;
+$fs-popup-label-768: 36px;
+$fs-btn-320: 19px;
+$fs-btn-768: 30px;
+$fs-btn-1200: 19px;
+$fs-field-320: 17px;
+$fs-field-768: 32px;
+$fs-work-title: 12px;
+$fs-contact-form-title-320: 19px;
+$fs-contact-form-title-768: 27px;
+$fs-contact-form-label-320: 18px;
+$fs-contact-form-label-768: 22px;
+$fs-contact-form-field-320: 13px;
+$fs-contact-form-field-768: 17px;
+$fs-contact-form-field-1200: 14px;
+//typography - font-family
+
+$ff-base: "fira_sans", Helvetica, Arial, sans-serif;
+$ff-skills: "proxima_nova", Helvetica, Arial, sans-serif;
+
+
+
+
+//typography - line-height
+
+$lh-base: 1.4;
+$lh-p: round($fs-p * $lh-base);
+$lh-1: round($fs-h1 * $lh-base);
+$lh-2: round($fs-h2 * $lh-base);
+$lh-3: round($fs-h3 * $lh-base);
+$lh-4: round($fs-h4 * $lh-base);
+$lh-5: round($fs-h5 * $lh-base);
+$lh-6: round($fs-h6 * $lh-base);
+$lh-list: 1.2;
+$lh-copyright: 1.2;
+$lh-contact-link: 2;
+$lh-btn: 1.2;
+
+//typography - font-weight
+
+$fw-normal: 400; //book
+$fw-thin: 300; //light
+$fw-bold: 700; //medium
+$fw-regular: 600; //regular
+
+//typography - font-style
+
+$fst-normal: normal;
+$fst-italic: italic;
+
+//animation
+
+$time-animation-1: .2s;
+
+
+
+
+
+

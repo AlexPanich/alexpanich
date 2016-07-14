@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+
+  &__img {
+    width: 166px;
+    height: 29px;
+
+    @media (min-width: 768px) {
+      width: 243px;
+      height: 42px;
+    }
+  }
+
+  &__text {
+    display: block;
+    height: 0;
+    &--hidden {
+      text-indent: -99999px;
+    }
+  }
+}

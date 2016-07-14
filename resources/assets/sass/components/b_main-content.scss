@@ -1,0 +1,11 @@
+.main-content {
+  &__inner {
+    padding-bottom: 25px;
+
+    @include container();
+
+    @media (min-width: 768px) {
+      padding-bottom: 0;
+    }
+  }
+}

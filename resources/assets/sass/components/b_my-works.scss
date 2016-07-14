@@ -1,0 +1,30 @@
+.my-works {
+  @extend %info-block;
+
+  &__title {
+    @extend %info-block__title;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 15%;
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: flex-start;
+      align-items: flex-start;
+      padding: 0 10%;
+    }
+
+    @media (min-width: 1200px) {
+      display: block;
+      margin-left: -20px;
+      padding: 30px;
+    }
+  }
+}

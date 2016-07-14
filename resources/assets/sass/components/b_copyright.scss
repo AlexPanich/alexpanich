@@ -1,0 +1,11 @@
+.copyright {
+  padding: 10px 0;
+
+  text-align: center;
+
+  @include font($fs-copyright-320, $lh-copyright);
+
+  @media (min-width: 768px) {
+    font-size: $fs-copyright-768;
+  }
+}

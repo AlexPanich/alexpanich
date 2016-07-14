@@ -1,0 +1,113 @@
+.basic-information {
+  @extend %info-block;
+
+  @media (min-width: 768px) {
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-bottom: 35px;
+  }
+
+  &__title {
+    @extend %info-block__title;
+  }
+
+  &__avatar-wrap {
+    width: 132px;
+    margin-bottom: 20px;
+
+    @include center();
+
+    @media (min-width: 768px) {
+      width: 200px;
+      margin: 0;
+      margin-right: 40px;
+      margin-left: 30px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 150px;
+      margin-right: 24px;
+      margin-left: 52px;
+      padding-top: 15px;
+    }
+  }
+
+  &__content {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    @extend %zero-list;
+
+
+    @media (min-width: 768px) {
+      display: block;
+
+      text-align: left;
+    }
+  }
+
+  &__name {
+    @include font($fs-basic-information-name-320, $lh-list, $fw-bold, $list-name-color);
+
+    @media (min-width: 768px) {
+      float: left;
+      clear: both;
+      margin-right: 5px;
+
+      font-size: $fs-basic-information-name-768;
+    }
+
+    @media (min-width: 1200px) {
+      margin-right: 18px;
+
+      font-size: $fs-basic-information-name-1200;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 28px;
+
+    @include font($fs-basic-information-desc-320, $lh-list, $fw-regular, $list-desc-color);
+
+    @media (min-width: 768px) {
+      display: block;
+      float: left;
+      margin-bottom: 15px;
+
+      font-size: $fs-basic-information-desc-768;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: $fs-basic-information-desc-1200;
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100px;
+      margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+        width: auto;
+        max-width: 55%;
+      }
+    }
+  }
+}

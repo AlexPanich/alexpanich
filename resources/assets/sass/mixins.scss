@@ -1,0 +1,124 @@
+@mixin font($fs: $fs-base, $lh: $lh-base, $fw: $fw-thin, $color: $font-color, $fst: $fst-normal, $ff: $ff-base) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  font-family: $ff;
+  color: $color;
+  font-style: $fst;
+} 
+
+@mixin center() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+@mixin container() {
+  width: 90%;
+
+  @include center();
+
+  @media (min-width: 768px) {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 650px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+@mixin zero-center {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin btn($background-color, $shadow-color) {
+  $shadow-width: 2px;
+  
+  position: relative;
+
+  width: 140px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+
+  text-align: center;
+
+  background-color: $background-color;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 $shadow-width 0 0 $shadow-color;
+
+  @include font($fs-btn-320, $lh-btn, $fw-normal, $white);
+
+  @media (min-width: 768px) {
+    padding-top: 10px;
+    padding-bottom: 6px;
+
+    font-size: $fs-btn-768;
+
+    box-shadow: 0 ($shadow-width + 4) 0 0 $shadow-color;
+  }
+
+  @media (min-width: 1200px) {
+    width: 138px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+
+    font-size: $fs-btn-1200;
+
+    box-shadow: 0 $shadow-width 0 0 $shadow-color;
+  }
+
+  &:hover {
+    box-shadow: 0 $shadow-width 0 0 $shadow-color;
+
+    @media (min-width: 768px) {
+      box-shadow: 0 ($shadow-width + 4) 0 0 $shadow-color;
+    }
+
+    @media (min-width: 1200px) {
+      box-shadow: 0 $shadow-width 0 0 $shadow-color;
+    }
+  }
+
+  &:active {
+    padding-top: 6px;
+    padding-bottom: 0;
+
+    box-shadow: 0 $shadow-width 0 0 $background-color, inset 0 $shadow-width 0 0 $shadow-color;
+
+    @media (min-width: 768px) {
+      padding-top: 14px;
+      padding-bottom: 2px;
+
+      box-shadow: 0 ($shadow-width + 4) 0 0 $background-color, inset 0 ($shadow-width + 4) 0 0 $shadow-color;
+    }
+
+    @media (min-width: 1200px) {
+      padding-top: 6px;
+      padding-bottom: 0;
+
+      box-shadow: 0 $shadow-width 0 0 $background-color, inset 0 $shadow-width 0 0 $shadow-color;
+    }
+  }
+}
