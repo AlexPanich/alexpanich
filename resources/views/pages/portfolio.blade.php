@@ -23,8 +23,8 @@
                                         <img class="work__image" src="{{ $work->getPreviewTn() . '' }}" alt="{{ $work->title }}">
                                     </a>
                                 </div>
-                                <a href="{{ $work->url }}" class="work__link">{{ $work->url }}</a>
-                                <a href="{{ $work->github }}" class="work__link">Посмотреть на Github</a>
+                                <a href="{{ $work->url }}" class="work__link">{{ $work->title }}</a>
+                                <a href="{{ $work->github }}" class="work__link">Github</a>
                                 <div class="work__desc">{{ $work->description }}</div>
                             </article>
                             @endforeach

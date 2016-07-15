@@ -37,6 +37,9 @@
     &:hover .work__overlay {
       display: block;
     }
+    &:hover .work__title {
+      animation: zoom 0.3s ease-in-out;
+    }
   }
 
   &__overlay {
@@ -55,7 +58,7 @@
     left: 50%;
 
     display: inline-block;
-    padding: 10px;
+    padding: 6px;
 
     text-align: center;
 
@@ -68,9 +71,20 @@
 
   &__link {
     display: block;
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   &__desc {
-    line-height: (2 * $lh-base);
+    max-height: (2 * $lh-base * $fs-base);
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  @keyframes zoom {
+    from { transform: translate(-50%, -50%) scale(0); }
+    to { transform: translate(-50%, -50%) scale(1); }
   }
 }
