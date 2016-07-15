@@ -78,7 +78,7 @@
                         <ul class="education__list">
                             <li class="education__item education__item--php">
                                 <span class="education__item-name">Академия программирования "PROFIT"<br>T4: быстрый вход в мир современных фреймворков</span>
-                                <span class="education__item-time">май 2015 - июль 2015</span>
+                                <span class="education__item-time">май 2016 - июль 2016</span>
                             </li>
                             <li class="education__item education__item--db">
                                 <span class="education__item-name">Академия программирования "PROFIT"<br>DBA: введение в профессию</span>
