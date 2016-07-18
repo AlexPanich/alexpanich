@@ -16,15 +16,14 @@
                             @foreach($works as $work)
                             <article class="work">
                                 <div class="work__image-wrap">
-                                    <a href="#">
+                                    <a href="{{ $work->url }}" target="_blank">
                                         <div class="work__overlay">
                                             <div class="work__title">{{ $work->title }}</div>
                                         </div>
                                         <img class="work__image" src="{{ $work->getPreviewTn() . '' }}" alt="{{ $work->title }}">
                                     </a>
                                 </div>
-                                <a href="{{ $work->url }}" class="work__link">{{ $work->title }}</a>
-                                <a href="{{ $work->github }}" class="work__link">Github</a>
+                                <a href="{{ $work->github }}" class="work__link">Посмотреть код</a>
                                 <div class="work__desc">{{ $work->description }}</div>
                             </article>
                             @endforeach
